@@ -1,0 +1,13 @@
+const person = [
+    {"name":"홍길동", "age":20, "nationality" :"대한민국"},
+    {"name":"안나별","age":21, "nationality":"대한민국"},
+    {"name":"슈바이처", "age":43,"nationality":"미국"},
+    {"name" : "징기스칸" , "age":34,"nationality":"몽골"}
+];
+
+console.log(typeof person[0]); 
+console.log(typeof person[1]); 
+
+
+console.log('---------------------------');
+console.log(person[0].name+ ""+ person[0].age +""+ person[0].nationality);
