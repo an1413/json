@@ -41,6 +41,6 @@ console.log('----------------------------------------역따옴표');
 person[0].name = "홍길자";
 person[0].age = 22;
 console.log('홍길동의 이름이 ${person[0].name} 홍길자로 수정되었고, 나이는 ${person[0].name}22살로 수정되었습니다.');
-
+console.log({...person});
 
 

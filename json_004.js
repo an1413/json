@@ -35,4 +35,26 @@ window.onload =() =>{
     }
     document.getElementById("aaa").innerHTML = val;
 
+    //반복문을 이용한 엑세스
+    //for
+
+    let val1 = "";
+    for(let i =0; i< book.category.length; i++){
+       // val1 += book.category[i] + "<p>";
+       val1 += '${book["category"][i]}<br>';
+    }
+    document.getElementById("aaa1").innerHTML = val1;
+
+    //for ..in
+    for(let i in book.category){
+        val1 += book.category[i] + "<br>";
+    }
+    document.getElementById("aaa1").innerHTML = val1;
+
+    // for... of..
+    for(let value1 of book.category){
+        val1 += value1 + "<br>";
+    }
+    document.getElementById("aaa1").innerHTML = val1;
+
 };
