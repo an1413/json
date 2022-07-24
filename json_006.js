@@ -3,11 +3,18 @@
 // JSON Parsing --> JSON 형식의 텍스트 문자열을 목적에 맞게 객체로 변환.
 
 
+window.onload = () => {
+
+    document.getElementById('btn').addEventListener('click',function() {
+       
+        console.log('text..');
+        // ====================================================
+        let json = 
         {
             "book":[{
                 "isbn":"123-456-789",
                 "author":{
-                    "nam e":"홍길동",
+                    "name":"홍길동",
                     "email":"hong@hongkildong.com"
                 },
                 "editor":{
@@ -39,6 +46,38 @@
                 "comwinner":["김진경","안나별","이정길"],
                 "add1":false,
                 "add2":true
-        }]
-            
+      }]
+    }
+        json = json["book"];
+        console.log(json.length);
+        console.log(json);
+        // console.log(json.json);  // undefined
+        console.log(json[0].isbn);
+        console.log(json[0].editor);
+        console.log(json[0].category);
+        console.log(json[0].comments);
+        console.log(json[0].comments[0]);
+        console.log(json[0].comments[json[0].comments.length-1]);
+        console.log(json[0].comments.length);
+
+        console.log('---------------------------------------');
+
+        for(let i=0; i<json.length; i++){
+            console.log(json[i].commnets);
+            console.log(json[i].comwinner);
+
         }
+
+        console.log('-------------------------------------');
+
+        for(let i = 0; i <json.length; i++){
+            for(let j = 0; j< json[i].comments.length;j++){
+                // 댓글 참가자
+                let bookComments = json[i].comments[j]
+                console.log(bookComments.id+":"+bookComments.text);
+            }
+            //당첨자
+            console.log(typeof json[i].comwinner.join(",")); //string
+        }
+
+    

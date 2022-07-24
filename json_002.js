@@ -26,7 +26,7 @@ console.log({...person});   // _proto__ --> Object
 // [4] : 반복 가능한 객체 --> for .. of... (전개 연산자)
 console.log('-----------------------------------for ..of');
 for(let ele of person){                     // person --> iterable 즉, 반복 가능한 객체가 오면 된다.
-    console.log(ele);
+    cons1le.log(ele);
 
 }
 
